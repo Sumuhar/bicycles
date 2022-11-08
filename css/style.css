@@ -450,12 +450,6 @@ body {
   }
 }
 
-@media (min-width: 20em) {
-  .card-bicycle__text h1 {
-    font-size: 1.5rem;
-  }
-}
-
 @media (max-width: 37.5em) {
   .bicycles-section {
     padding: 2.5rem 0rem;
@@ -591,6 +585,12 @@ body {
   }
 }
 
+@media (max-width: 22.5em) {
+  .card-bicycle__text h1 span {
+    white-space: initial;
+  }
+}
+
 @media (max-width: 20.9375em) {
   .bicycles__title {
     font-size: 1.25rem;
@@ -602,10 +602,6 @@ body {
 
   .card-bicycle__text h1 {
     font-size: 1.5rem;
-  }
-
-  .card-bicycle__text h1 {
-    font-size: 1.375rem;
   }
 
   .card-bicycle__text p {
@@ -795,20 +791,6 @@ body {
 @supports not (font-size: clamp( 0.875rem , 0.7990018149rem  +  0.3629764065vw , 1rem )) {
     .blue-btn {
       font-size: calc(0.875rem + 0.125 * (100vw - 20.9375rem) / 34.4375);
-    }
-}
-}
-
-@media (min-width: 20.9375em) and (max-width: 20em) {
-@supports (font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem )) {
-    .card-bicycle__text h1 {
-      font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem )) {
-    .card-bicycle__text h1 {
-      font-size: calc(1.375rem + 0.125 * (100vw - 20.9375rem) / -0.9375);
     }
 }
 }
