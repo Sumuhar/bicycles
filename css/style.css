@@ -133,7 +133,57 @@ body {
      object-fit: contain;
 }
 
-
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
 
 .bicycles-section {
   padding: 5.0625rem 0rem;
@@ -400,6 +450,12 @@ body {
   }
 }
 
+@media (min-width: 20em) {
+  .card-bicycle__text h1 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 37.5em) {
   .bicycles-section {
     padding: 2.5rem 0rem;
@@ -546,6 +602,10 @@ body {
 
   .card-bicycle__text h1 {
     font-size: 1.5rem;
+  }
+
+  .card-bicycle__text h1 {
+    font-size: 1.375rem;
   }
 
   .card-bicycle__text p {
@@ -735,6 +795,20 @@ body {
 @supports not (font-size: clamp( 0.875rem , 0.7990018149rem  +  0.3629764065vw , 1rem )) {
     .blue-btn {
       font-size: calc(0.875rem + 0.125 * (100vw - 20.9375rem) / 34.4375);
+    }
+}
+}
+
+@media (min-width: 20.9375em) and (max-width: 20em) {
+@supports (font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem )) {
+    .card-bicycle__text h1 {
+      font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 4.1666666667rem  +  -13.3333333333vw , 1.5rem )) {
+    .card-bicycle__text h1 {
+      font-size: calc(1.375rem + 0.125 * (100vw - 20.9375rem) / -0.9375);
     }
 }
 }
